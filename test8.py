@@ -10,6 +10,7 @@ b[500:600,300:500,2]=0
 print(b)
 
 cv2.namedWindow("123", cv2.WINDOW_NORMAL) #調整影像大小
-cv2.imshow("br", img) #顯示影像
+cv2.imshow("123", img) #顯示影像
+cv2.imshow("b", b)
 cv2.waitKey(0) 
 cv2.destroyAllWindows() 
