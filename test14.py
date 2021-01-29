@@ -8,7 +8,7 @@ ret1, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 # Otsu's thresholding
 ret2, th2 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 # Otsu's thresholding after Gaussian filtering
-# （5,5）为高斯核的大小，2 为标准差
+# （5,5）为高斯核的大小，核為奇數，2 为标准差
 blur = cv2.GaussianBlur(img, (5, 5), 2)
 # 阈值一定要设为 0！
 ret3, th3 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
