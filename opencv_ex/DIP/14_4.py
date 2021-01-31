@@ -8,7 +8,7 @@ img1 = cv2.imread('../image/test.jpg')
 rows1, cols1, ch1 = img1.shape
 
 pts1 = np.float32([[50, 50], [200, 50], [50, 200]])
-pts2 = np.float32([[10, 100], [200, 50], [100, 250]])
+pts2 = np.float32([[10, 100], [200, 50], [100, 250]]) #三點座標
 
 M = cv2.getAffineTransform(pts1, pts2) 
 

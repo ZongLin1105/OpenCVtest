@@ -6,16 +6,16 @@ img = cv2.imread('../image/test10.jpg')
 rows, cols, ch = img.shape
 
 # 设置标记点和目标点
-markpoint = [[93, 651], [20, 197], [788, 540], [665, 20]]
-dstpoint = [[0, 0], [352, 0], [0, 500], [352, 500]]
+markpoint = [[93, 651], [20, 197], [788, 540], [665, 20]] #設置標記點
+dstpoint = [[0, 0], [352, 0], [0, 500], [352, 500]] #設計目標點
 
 # 强调标记点
 for i in markpoint:
-    cv2.circle(img, tuple(i), 10, (0, 255, 0), -1)
+    cv2.circle(img, tuple(i), 10, (0, 255, 0), -1) #將標記點標為綠色
 
 # 转换点的格式
 pts1 = np.float32(markpoint)
-pts2 = np.float32(dstpoint)
+pts2 = np.float32(dstpoint) #folat32的點
 
 # 生成透视矩阵
 M = cv2.getPerspectiveTransform(pts1, pts2)
